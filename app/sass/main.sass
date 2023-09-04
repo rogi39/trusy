@@ -1,0 +1,553 @@
+@import config
+
+.noscroll
+	overflow: hidden
+
+.response
+	position: relative
+	z-index: 2
+
+.success
+	margin-top: 30px
+	background-color: #3fb53f
+	padding: 20px
+	color: #fff
+	animation: fade .25s ease
+	p
+		margin: 0
+
+.errors-list
+	list-style-type: none
+	padding: 0
+	margin-top: 30px
+	background-color: #da4c4c
+	padding: 20px
+	color: #fff
+	animation: fade .25s ease
+
+img
+	max-width: 100%
+	height: auto
+	user-select: none
+
+.video
+	position: relative
+	text-decoration: none
+	border-radius: 6px
+	padding-bottom: 56.25%
+	height: 0
+	overflow: hidden
+	margin-bottom: 30px
+	iframe, video
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border-width: 0
+		outline-width: 0
+
+.lg-backdrop.in
+	opacity: 0.55
+
+.lg-outer .lg-thumb-outer, .lg-outer .lg-toggle-thumb
+	background-color: rgba(0,0,0, .45)
+
+.breadcrumb-block
+	padding: 20px 0
+	+media-breakpoint-up(sm)
+		padding: 40px 0
+
+.breadcrumb
+	margin: 0
+	list-style-type: none
+	display: flex
+	flex-wrap: wrap
+	font-size: 14px
+	line-height: 19px
+	position: relative
+	z-index: 1
+	padding: 0
+	position: relative
+	+media-breakpoint-up(sm)
+		font-size: 16px
+	&__link
+		color: #A4A4A4
+		&:after
+			content: '-'
+			margin: 0 5px
+		&:hover
+			text-decoration: none
+			color: #fff
+			&:after
+				color: #A4A4A4
+	&__item_active
+		color: $accent
+
+.pagination
+	list-style-type: none
+	padding: 0
+	display: flex
+	margin: 0
+	margin-top: 30px
+	&__item
+		margin-right: 8px
+		flex: 0 0 33px
+		width: 33px
+		height: 33px
+		+media-breakpoint-up(sm)
+			flex: 0 0 40px
+			width: 40px
+			height: 40px
+	&__item_active .pagination__link
+		border-color: $accent
+		background-color: $accent
+		color: #fff
+	&__link
+		background-color: transparent
+		font-size: 16px
+		line-height: 25px
+		height: 100%
+		width: 100%
+		color: #000
+		display: flex
+		align-items: center
+		justify-content: center
+		text-decoration: none
+		border-radius: 50%
+		transition: border-color .25s ease, color .25s ease, background-color .25s ease
+		border-color: #000
+		border: 1px solid $accent
+		color: #000
+		&:hover
+			text-decoration: none
+			border-color: $accent
+			color: #fff
+			background-color: $accent
+
+.content
+	margin-bottom: 30px
+	&_m0
+		margin: 0
+	iframe
+		width: 100%
+		margin: 0 auto !important
+	p
+		font-size: 16px
+		font-weight: 400
+		line-height: 24px
+		color: $text
+		margin: 0
+		&:not(:last-child)
+			margin-bottom: 10px
+		+media-breakpoint-up(sm)
+			&:not(:last-child)
+				margin-bottom: 24px
+	b, strong
+		font-weight: 700
+		font-size: 17px
+		line-height: 24px
+		margin-bottom: 15px
+	a
+		color: $accent
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+	img
+		margin-bottom: 30px
+		border-radius: 15px
+	h2
+		font-size: 20px
+		line-height: 26px
+		color: $text
+		font-weight: 600
+		margin-bottom: 20px
+		+media-breakpoint-up(sm)
+			font-size: 24px
+			line-height: 30px
+	h3
+		font-size: 19px
+		line-height: 25px
+		color: $text
+		font-weight: 600
+		margin-top: 40px
+		margin-bottom: 20px
+	ol
+		padding: 0
+		padding-left: 17px
+		margin-left: 10px
+		li
+			margin-bottom: 10px
+			padding-left: 8px
+		li::marker
+			color: $accent
+			font-weight: 700
+	ul
+		list-style-type: none
+		margin-left: 10px
+		padding: 0
+		margin-bottom: 15px
+		+media-breakpoint-up(sm)
+			margin-bottom: 25px
+		li
+			font-size: 16px
+			line-height: 24px
+			font-weight: 300
+			margin-bottom: 10px
+			// display: flex
+			position: relative
+			padding-left: 25px
+			&:before
+				content: ''
+				position: absolute
+				left: 0
+				height: 8px
+				width: 8px
+				flex: 0 0 8px
+				border-radius: 50%
+				background-color: $accent
+				box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25)
+				display: inline-block
+				margin-right: 15px
+				margin-top: 7px
+
+.section
+	padding: 30px 0
+	+media-breakpoint-up(sm)
+		padding: 41px 0
+	+media-breakpoint-up(xl)
+		padding: 71px 0
+	&_gray
+		background-color: #fafafa
+
+.container
+	padding: 0 15px
+	margin: 0 auto
+	width: 100%
+	+media-breakpoint-up(xl)
+		max-width: 1350px
+	&_text
+		+media-breakpoint-up(xl)
+			max-width: 811px
+
+.row
+	display: flex
+	flex-wrap: wrap
+	margin: 0 -15px
+
+.first
+	background-image: url('../images/dest/first.jpg')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	position: relative
+	height: 680px
+	display: flex
+	align-items: center
+	&:after
+		content: ''
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+		background-color: #323C34
+		opacity: .8
+		position: absolute
+	/* .first__row */
+	&__row
+		display: flex
+		align-items: center
+		position: relative
+		z-index: 1
+		justify-content: space-between
+	/* .first__left */
+	&__left
+
+	/* .first__right */
+	&__right
+		flex: 0 0 244px
+	/* .first__title-row */
+	&__title-row
+		display: flex
+		align-items: center
+		margin-bottom: 24px
+	/* .first__title */
+	&__title
+		color: #fff
+		font-family: Tinos
+		font-size: 64px
+		font-weight: 400
+		margin: 0
+		margin-right: 32px
+	/* .first__studio */
+	&__studio
+		color: #fff
+		font-size: 20px
+		font-weight: 400
+		line-height: 30px
+		max-width: 181px
+	/* .first__text */
+	&__text
+		color: #fff
+		font-size: 32px
+		font-weight: 400
+		max-width: 750px
+		margin-bottom: 42px
+	/* .first__btn-row */
+	&__btn-row
+		display: flex
+		align-items: center
+	/* .first__btn-text */
+	&__btn-text
+		color: #fff
+		max-width: 310px
+		font-size: 20px
+		font-weight: 400
+		line-height: 30px
+		margin-left: 40px
+
+
+.main
+	padding-top: 90px
+
+.btn
+	color: $text
+	font-size: 16px
+	font-weight: 600
+	line-height: 22px
+	text-transform: uppercase
+	background-color: $accent
+	padding: 20px 56px
+	position: relative
+	transition: background-color .35s ease-out, color .35s ease-out
+	&:after
+		content: ''
+		position: absolute
+		z-index: -1
+		top: 8px
+		left: 8px
+		border: 1px solid $accent
+		height: 100%
+		width: 100%
+		transition: all .35s ease-out
+	&:hover
+		background-color: transparent
+		color: #fff
+		&:after
+			top: 0
+			left: 0
+
+.info-block
+	
+	/* .info-block__item */
+	&__item
+		height: 170px
+		background-color: $accent
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		padding: 0 22px
+	&__item_1
+		background-color: #fff
+	&__item_2
+		background-color: #F1F1F1
+	&__item_3
+		background-color: #fff
+	&__item_4
+
+	/* .info-block__phone */
+	&__phone
+	
+	/* .info-block__text */
+	&__text
+		max-width: 200px
+		text-align: center
+
+
+
+
+.info-block-decor
+	position: relative
+	/* .info-block-decor__items */
+	&__items
+		position: absolute
+		z-index: 1
+		width: 15px
+		right: 0
+		+media-breakpoint-up(decore)
+			width: calc(50% - (1320px / 2))
+	/* .info-block-decor__item */
+	&__item
+		background-color: $accent
+		height: 170px
+	/* .info-block-decor__item_1 */
+	&__item_1
+		background-color: #fff
+	/* .info-block-decor__item_2 */
+	&__item_2
+		background-color: #F1F1F1
+	/* .info-block-decor__item_3 */
+	&__item_3
+		background-color: #fff
+	/* .info-block-decor__item_4 */
+	&__item_4
+	
+
+.header
+	position: fixed
+	width: 100%
+	top: 0
+	left: 0
+	z-index: 3
+	background-color: #fff
+	/* .header__decore */
+	&__decore
+		position: absolute
+		height: 90px
+		z-index: 1
+		width: 15px
+		right: 0
+		top: 0
+		background-color: $accent
+		+media-breakpoint-up(decore)
+			width: calc(50% - (1320px / 2))
+
+	/* .header__row */
+	&__row
+		display: flex
+		align-items: center
+		justify-content: space-between
+		position: relative
+		height: 90px
+	/* .header__left */
+	&__left
+		flex: 0 0 146px
+	/* .header__center */
+	&__center
+		flex: 1
+		display: flex
+		align-items: center
+	/* .header__right */
+	&__right
+		flex: 0 0 244px
+		height: 90px
+	/* .header__btn */
+	&__btn
+		background-color: $accent
+		height: 90px
+		display: flex
+		align-items: center
+		justify-content: center
+		color: $text
+		font-size: 16px
+		font-weight: 600
+		line-height: 22px
+		text-decoration-line: underline
+		text-transform: uppercase
+		transition: background-color .35s ease-out
+		&:hover
+			background-color: lighten($accent, 2%)
+
+	&__toggle-menu
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		padding: 10px 0
+		position: relative
+		z-index: 22
+		color: #545454
+		&:hover
+			text-decoration: none
+			color: #545454
+		+media-breakpoint-up(sm)
+			margin-right: 15px
+			margin-left: 5px
+		&.on .header__toggle-line
+			background-color: transparent
+		&.on .header__toggle-line::before
+			transform: rotate(45deg) translate(2px, 5px)
+			background-color: #545454
+			left: 3px
+		&.on .header__toggle-line::after
+			transform: rotate(-45deg) translate(2px, -5px)
+			background-color: #545454
+			left: 3px
+	&__toggle-line
+		width: 12px
+		height: 2px
+		background-color: #545454
+		display: block
+		position: relative
+		transition: all 0.3s
+		&:after, &:before
+			content: ''
+			width: 18px
+			height: 2px
+			background-color: #545454
+			position: absolute
+			transition: all 0.3s
+			left: 0
+		&:after
+			top: 5px
+		&:before
+			bottom: 5px
+
+.logo
+	position: absolute
+	z-index: 1
+	left: 0
+	top: 0
+	width: 146px
+	height: 146px
+	/* .logo__block */
+	&__block
+		height: 130px
+		width: 130px
+		display: flex
+		align-items: center
+		justify-content: center
+		background-color: $accent
+		&:after
+			content: ''
+			width: 146px
+			height: 146px
+			position: absolute
+			border: 1px solid #fff
+	/* .logo__img */
+	&__img
+	
+
+.menu
+	/* .menu__list */
+	&__list
+		margin: 0
+		padding: 0
+		list-style-type: none
+		display: flex
+	/* .menu__item */
+	&__item
+		&:not(:last-child)
+			margin-right: 20px
+		+media-breakpoint-up(wxp)
+			&:not(:last-child)
+				margin-right: 32px
+	/* .menu__link */
+	&__link
+		color: #323C34
+		font-size: 15px
+		font-weight: 400
+		line-height: 20px
+		text-transform: uppercase
+
+
+
+
+
+
+
+@keyframes "fade"
+	from
+		opacity: 0
+	to
+		opacity: 1
